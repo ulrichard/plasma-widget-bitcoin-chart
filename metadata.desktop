@@ -1,0 +1,17 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Bitcoin chart
+Type=Service
+ServiceTypes=Plasma/Applet
+Icon=/contents/icons/logo.png
+X-Plasma-API=python
+X-Plasma-MainScript=code/main.py
+X-KDE-PluginInfo-Author=Alexandr "Sky" Ivanov
+X-KDE-PluginInfo-Email=alexandr.sky@gmail.com
+X-KDE-PluginInfo-Name=btc-chart
+X-KDE-PluginInfo-Version=0.0.1
+X-KDE-PluginInfo-Website=http://bitcoin.org/
+X-KDE-PluginInfo-Category=Online Services
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-EnabledByDefault=true
