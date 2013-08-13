@@ -56,11 +56,17 @@ class BtcChartPlasmoid(plasmascript.Applet):
     def update(self):
         self._timer = self.startTimer(self._interval*1000*60)
         self._chart.clearTrades()
-        trades = self._data.init(self._market)
+        try:
+            trades = self._data.init(self._market)
+        except:
+            pass
         self._chart.addTrades(trades)
 
     def timerEvent(self, event):
-        self._chart.addTrades(self._data.getData())
+        try:
+            self._chart.addTrades(self._data.getData())
+        except:
+            pass
 
     def createConfigurationInterface(self,  parent):
         parent.setButtons(KDialog.ButtonCode(KDialog.Ok | KDialog.Cancel | KDialog.Apply))
