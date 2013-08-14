@@ -1,0 +1,14 @@
+Source: plasma-widget-bitcoin-chart
+Section: kde
+Priority: extra
+Maintainer: Richard Ulrich <richi@paraeasy.ch>
+Build-Depends: python, debhelper (>= 9.0)
+Homepage: http://kde-apps.org/content/show.php/Bitcoin+chart?content=142692
+Standards-Version: 3.9.4
+
+Package: plasma-widget-bitcoin-chart
+Architecture: any
+Depends: ${python:Depends}, ${misc:Depends}, plasma-scriptengine-python
+Description: Simple chart for Bitcoins on bitcoincharts.com
+ Shows the bitcoin exchange rate over the past few hours for
+ different exchanges and currencies.

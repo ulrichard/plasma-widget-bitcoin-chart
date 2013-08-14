@@ -1,0 +1,6 @@
+plasma-widget-bitcoin-chart (0.0.3-1~raring) raring; urgency=low
+
+  * Initial release (closes: #718885).
+
+ -- Richard Ulrich <richi@paraeasy.ch>  Tue, 6 Aug 2013 21:03:32 +0200
+
