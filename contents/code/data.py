@@ -19,21 +19,21 @@ class Data(QObject):
         self._telnet = None
         self._dataFlow = ''
         try:
-            http = urllib.urlopen('http://bitcoincharts.com/t/markets.json')
+            http = urllib.urlopen('http://api.bitcoincharts.com/v1/markets.json')
             data = json.loads(http.read())
             for market in data:
                 market = market.get('symbol')
                 if market:
                     self._markets.append(market)
         except:
-            self._markets = ["mtgoxUSD", "mtgoxCHF", "mtgoxEUR", "btcEUR"]
+            self._markets = ["mtgoxUSD", "mtgoxCHF", "mtgoxEUR", "btcEUR", "bitstampUSD"]
         self._telnet = Telnet(TELNET_HOST, TELNET_PORT)
                 
     def init(self, market):
         if not market:
             return []
         self._market = market
-        link = 'http://bitcoincharts.com/t/trades.csv?symbol=%s&start=%d&end=%d' % (self._market,
+        link = 'http://api.bitcoincharts.com/v1/trades.csv?symbol=%s&start=%d&end=%d' % (self._market,
                                                                                     int(time() - 24*3600),
                                                                                     int(time()))
         http = urllib.urlopen(link)
